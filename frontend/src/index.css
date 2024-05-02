@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	font-family: Montserrat;
+	background-color: rgba(255, 255, 255);
+	box-sizing: border-box;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	--green: #339933;
+	--black: #282828;
+	--white: #ffffff;
+	--grey: #8b8b8b;
+	--grey-divider: #dddddd;
+	--light-grey: #f1f3f4;
+	--black-txt: #282828;
+	--white-txt: #ffffff;
+	--grey-txt: #8b8b8b;
+}
+
+body {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 1.1em;
+}
+
+a {
+	color: var(--black-txt);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+a:hover {
+	color: var(--green);
+}
+
+button {
+	font-family: inherit;
+	width: 100%;
+	min-width: fit-content;
+	padding: 16px 32px;
+	border: none;
+	border-radius: 6px;
+	background-color: var(--green);
+	color: var(--white-txt);
+	font-weight: 600;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+button.active {
+	background-color: var(--white);
+	color: var(--black-txt);
+	border: 1px solid var(--black);
+}
+
+button:hover {
+	background-color: var(--black);
+	color: var(--white-txt);
+}
+
+button.nav {
+	padding: 8px 16px;
+	border: 1px solid var(--grey-divider);
+	border-radius: 6px;
+	background-color: transparent;
+	color: var(--grey-txt);
+}
+
+button.nav:hover {
+	background-color: var(--light-grey);
+	color: var(--grey-txt);
+}
+
+button.nav:active {
+	color: var(--black-txt);
+}

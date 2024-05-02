@@ -1,0 +1,123 @@
+.hero {
+	background-image: url('back.jpg');
+	background-size: cover;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	padding: 80px 40px 0 40px;
+}
+
+.hero h1 {
+	width: 100%;
+	color: var(--white-txt);
+	font-size: 96px;
+	font-weight: 700;
+	line-height: 1.1em;
+}
+
+.button {
+	width: fit-content;
+}
+
+.categories {
+	padding: 80px 40px 0 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.categoriesCards {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	gap: 32px;
+}
+
+.contact {
+	padding: 80px 40px 0 40px;
+}
+
+.container {
+	background: linear-gradient(
+		34deg,
+		rgba(51, 153, 51, 1) 0%,
+		rgba(11, 113, 11, 1) 50%
+	);
+	border-radius: 12px;
+	padding: 32px 32px 0 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.container h2 {
+	color: var(--white-txt);
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 1.1em;
+	text-align: center;
+}
+
+.container form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.container input {
+	border: 1px solid var(--white);
+	border-radius: 6px;
+	padding: 16px;
+	background-color: transparent;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.3em;
+	color: var(--white-txt);
+	outline: none;
+}
+
+.container input::placeholder,
+.container input:focus {
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1.3em;
+	color: var(--white-txt);
+	outline: none;
+}
+
+.form {
+	width: 100%;
+	display: flex;
+	gap: 32px;
+}
+
+.container button {
+	background-color: var(--white);
+	color: var(--black-txt);
+}
+
+.container button:hover {
+	background-color: var(--black);
+	color: var(--white-txt);
+}
+
+.form form {
+	width: 100%;
+	min-width: 100px;
+	display: flex;
+	justify-content: center;
+}
+
+.sales {
+	padding: 80px 40px 0 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.salesCards {
+	display: flex;
+	gap: 32px;
+}
