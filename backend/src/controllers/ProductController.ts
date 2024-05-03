@@ -41,6 +41,21 @@ class ProductController {
 			res.status(500).json({ error: e })
 		}
 	}
+	async getByCategoryId(req: Request, res: Response) {
+		try {
+			const { categoryId } = req.params
+			const products = await prisma.product.findMany({
+				where: { categoryId: Number(categoryId) },
+			})
+			const categoryName = await prisma.category.findUnique({
+				where: { id: Number(categoryId) },
+				select: { name: true },
+			})
+			res.status(200).json({ categoryName, products })
+		} catch (e) {
+			res.status(500).json({ error: e })
+		}
+	}
 }
 
 export default new ProductController()

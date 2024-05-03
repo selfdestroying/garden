@@ -1,5 +1,5 @@
 .hero {
-	background-image: url('back.jpg');
+	background-image: url('../../public/back.jpg');
 	background-size: cover;
 	height: 600px;
 	display: flex;
@@ -28,9 +28,8 @@
 }
 
 .categoriesCards {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: nowrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
 	gap: 32px;
 }
 
@@ -118,6 +117,7 @@
 }
 
 .salesCards {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
 	gap: 32px;
 }

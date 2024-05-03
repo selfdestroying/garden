@@ -1,0 +1,13 @@
+.products {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	padding: 80px 40px 0 40px;
+	box-sizing: border-box;
+}
+
+.productsCards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+	gap: 32px;
+}

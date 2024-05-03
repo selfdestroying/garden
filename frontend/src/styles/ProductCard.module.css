@@ -1,6 +1,7 @@
+.productLink {
+	width: fit-content;
+}
 .card {
-	width: 100%;
-	max-width: 316px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;

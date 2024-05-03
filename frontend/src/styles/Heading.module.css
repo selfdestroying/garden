@@ -10,8 +10,8 @@
 	place-items: center;
 }
 
-.btn button {
-	width: fit-content;
+.btn a {
+	text-wrap: nowrap;
 }
 
 .divider {

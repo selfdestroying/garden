@@ -1,7 +1,15 @@
-import styles from './CategoryCard.module.css'
-const CategoryCard = ({ title, image }: { title: string; image: string }) => {
+import styles from '../styles/CategoryCard.module.css'
+const CategoryCard = ({
+	id,
+	title,
+	image,
+}: {
+	id: number
+	title: string
+	image: string
+}) => {
 	return (
-		<a href=''>
+		<a href={`/categories/${id}`}>
 			<div className={styles.card}>
 				<div className={styles.image}>
 					<img src={image} alt={title} />

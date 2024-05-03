@@ -1,5 +1,4 @@
-import GoogleMapReact from 'google-map-react'
-import styles from './Footer.module.css'
+import styles from '../styles/Footer.module.css'
 const Footer = () => {
 	return (
 		<div className={styles.footer}>
@@ -26,12 +25,12 @@ const Footer = () => {
 						<p className={styles.cardText}>10:00 - 20:00</p>
 					</div>
 				</div>
-				<div className={styles.map}>
+				{/* <div className={styles.map}>
 					<GoogleMapReact
 						defaultCenter={{ lat: 59.95, lng: 30.33 }}
 						defaultZoom={11}
 					></GoogleMapReact>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	)

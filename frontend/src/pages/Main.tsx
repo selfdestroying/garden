@@ -1,10 +1,22 @@
+import { queryOptions, useQuery } from '@tanstack/react-query'
 import CategoryCard from '../components/CategoryCard'
 import Heading from '../components/Heading'
 import Layout from '../components/Layout'
 import ProductCard from '../components/ProductCard'
-import styles from './Main.module.css'
+import styles from '../styles/Main.module.css'
+
+const categoriesListQuery = () =>
+	queryOptions({
+		queryKey: ['categories'],
+		queryFn: async () =>
+			await fetch('http://localhost:3000/api/categories').then(res =>
+				res.json()
+			),
+	})
 
 const Main = () => {
+	const { isLoading, data } = useQuery(categoriesListQuery())
+
 	return (
 		<Layout>
 			<div className={styles.hero}>
@@ -14,15 +26,23 @@ const Main = () => {
 				</div>
 			</div>
 			<div className={styles.categories}>
-				<Heading title='Categories' btnTitle='All categories' />
+				<Heading
+					title='Categories'
+					btnTitle='All categories'
+					link='/categories'
+				/>
 				<div className={styles.categoriesCards}>
-					<CategoryCard title='Category 1' image='back.jpg' />
-					<CategoryCard
-						title='Protective products and septic tanks'
-						image='back.jpg'
-					/>
-					<CategoryCard title='Category 1' image='back.jpg' />
-					<CategoryCard title='Category 1' image='back.jpg' />
+					{!isLoading &&
+						data.categories
+							.slice(0, 4)
+							.map((category: any) => (
+								<CategoryCard
+									key={category.id}
+									id={category.id}
+									title={category.name}
+									image='back.jpg'
+								/>
+							))}
 				</div>
 			</div>
 			<div className={styles.contact}>
@@ -58,24 +78,28 @@ const Main = () => {
 				<Heading title='Sales' btnTitle='All sales' />
 				<div className={styles.salesCards}>
 					<ProductCard
+						id={1}
 						title='Product 1'
 						price={500}
 						image='back.jpg'
 						discount={50}
 					/>
 					<ProductCard
+						id={1}
 						title='Product 1'
 						price={500}
 						image='back.jpg'
 						discount={50}
 					/>
 					<ProductCard
+						id={1}
 						title='Product 1'
 						price={500}
 						image='back.jpg'
 						discount={50}
 					/>
 					<ProductCard
+						id={1}
 						title='Product 1'
 						price={500}
 						image='back.jpg'
