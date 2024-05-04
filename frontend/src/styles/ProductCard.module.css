@@ -1,5 +1,6 @@
 .productLink {
 	width: fit-content;
+	max-width: 316px;
 }
 .card {
 	display: flex;

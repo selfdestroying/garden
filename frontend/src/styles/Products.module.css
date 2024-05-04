@@ -11,3 +11,69 @@
 	grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
 	gap: 32px;
 }
+
+.filtersContainer {
+	display: flex;
+	place-items: center;
+	gap: 40px;
+}
+
+.filtersContainer .title {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.3em;
+	color: var(--black-txt);
+}
+
+.priceFilter,
+.discountFilter,
+.sortFilter {
+	display: flex;
+	gap: 16px;
+	place-items: center;
+}
+
+.priceFilter input {
+	max-width: 112px;
+	border: 1px solid var(--grey-divider);
+	border-radius: 6px;
+	padding: 8px 16px;
+}
+
+.priceFilter input::placeholder {
+	color: var(--grey-txt);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.3em;
+}
+
+.priceFilter input:focus {
+	outline: none;
+}
+
+.discountFilter input {
+	width: 24px;
+	height: 24px;
+	border-radius: 6px;
+	border: 1px solid var(--grey-divider);
+	background-color: aqua;
+}
+
+.sortFilter select {
+	border: 1px solid var(--grey-divider);
+	padding: 8px 8px 8px 16px;
+	border-radius: 6px;
+}
+
+.sortFilter select:focus {
+	outline: none;
+}
+
+.sortFilter select option {
+	padding: 8px 16px;
+	border: 1px solid var(--grey-divider);
+	border-radius: 6px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.3em;
+}

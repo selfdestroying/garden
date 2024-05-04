@@ -38,6 +38,7 @@ const Category = () => {
 						<div className={styles.productsCards}>
 							{data.products.map((product: any) => (
 								<ProductCard
+									id={product.id}
 									key={product.id}
 									image='../../public/back.jpg'
 									price={product.price}

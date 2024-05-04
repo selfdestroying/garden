@@ -6,6 +6,7 @@ import Category, {
 	loader as productsByCategoryIdLoader,
 } from './pages/Category.tsx'
 import Main from './pages/Main.tsx'
+import Product, { loader as productLoader } from './pages/Product.tsx'
 import Products from './pages/Products.tsx'
 import './styles/index.css'
 
@@ -30,7 +31,8 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/product/:productId',
-		element: <div>Product</div>,
+		element: <Product />,
+		loader: productLoader(queryClient),
 	},
 ])
 
